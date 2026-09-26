@@ -217,7 +217,7 @@ export const skillsData = {
 };
 
 export const bioData = {
-  name: "Alex 'Voxel' Rivers",
+  name: "Mateusz Szwarc",
   title: "Game Developer & Systems Architect",
   tagline: "Forging visceral game mechanics, robust engine systems, and immersive audiovisual worlds.",
   status: "Available for Full-time Roles & Select Indie Contracts",
