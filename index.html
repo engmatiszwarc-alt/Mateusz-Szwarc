@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Rivers | Game Developer &amp; Systems Programmer</title>
+  <meta name="description" content="Portfolio of Alex Rivers - Game Developer, Gameplay Programmer, and Technical Artist specializing in Unreal Engine 5, Unity, Godot, C++, and HLSL shaders." />
+
+  <!-- Open Graph / Meta Cards -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Alex Rivers | Game Developer Portfolio" />
+  <meta property="og:description" content="Explore games, playable demos, and technical breakdowns in Unreal Engine 5, Unity, and Godot." />
+  <meta property="og:image" content="assets/images/project-chronoshift.svg" />
+
+  <!-- Fonts & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/game-ui.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/avatar.svg" />
+</head>
+<body>
+  <!-- Ambient Interactive Canvas Background -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="vignette-overlay"></div>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#hero" class="logo glitch-hover">
+        <span class="logo-badge">DEV</span>
+        <span>VOXEL<span style="color: var(--accent-cyan)">.GAMES</span></span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#games" class="nav-link">Games &amp; Projects</a></li>
+          <li><a href="#skills" class="nav-link">Skills &amp; Arsenal</a></li>
+          <li><a href="#about" class="nav-link">About Dev</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Interactive SFX Toggle -->
+        <button id="sfx-toggle" class="sfx-btn" title="Toggle Game Audio Effects" aria-label="Toggle Sound Effects">
+          <span class="sfx-wave">
+            <span></span><span></span><span></span>
+          </span>
+          <span>SFX: <strong id="sfx-status">MUTED</strong></span>
+        </button>
+
+        <a href="#contact" class="btn btn-primary hud-btn" style="padding: 0.5rem 1.1rem; font-size: 0.85rem;">
+          Get In Touch
+        </a>
+
+        <!-- Mobile Menu Hamburger -->
+        <button class="mobile-menu-btn" aria-label="Toggle Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section id="hero" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text-col">
+          <div class="hero-tag">
+            <span class="pulse-dot"></span>
+            <span>AVAILABLE FOR STUDIOS &amp; SELECT INDIE CONTRACTS</span>
+          </div>
+
+          <h1 class="hero-title">
+            Crafting <span class="text-gradient">Visceral Gameplay</span> &amp; Robust Game Systems
+          </h1>
+
+          <p class="hero-desc">
+            Gameplay Programmer &amp; Technical Artist with 5+ years building high-intensity mechanics, responsive physics, and custom shader pipelines in <strong>Unreal Engine 5</strong>, <strong>Unity</strong>, and <strong>Godot</strong>.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#games" class="btn btn-primary hud-btn">
+              <span>Explore Projects</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#skills" class="btn btn-secondary hud-btn">
+              <span>View Tech Stack</span>
+            </a>
+            <button id="copy-email-btn" class="btn btn-secondary hud-btn" title="Copy developer email">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span>Copy Email</span>
+            </button>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-value text-gradient">7+</span>
+              <span class="stat-label">Shipped Titles</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value" style="color: var(--accent-cyan)">12</span>
+              <span class="stat-label">Game Jams</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value" style="color: var(--accent-purple)">5+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="avatar-card hud-corner-card">
+            <div class="avatar-img-wrap">
+              <img src="assets/images/avatar.svg" alt="Alex Rivers Developer Profile" />
+            </div>
+            <h2 class="avatar-name">Alex "Voxel" Rivers</h2>
+            <p class="avatar-role">Gameplay Programmer // Tech Artist</p>
+            <div class="avatar-tags">
+              <span class="micro-badge">UE5 / C++</span>
+              <span class="micro-badge">Unity / C#</span>
+              <span class="micro-badge">HLSL Shaders</span>
+              <span class="micro-badge">Godot 4</span>
+              <span class="micro-badge">Niagara VFX</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Games Showcase Section -->
+    <section id="games" class="games-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// PORTFOLIO SHOWCASE</span>
+          <h2 class="section-title">Featured Games &amp; Prototypes</h2>
+          <p class="section-subtitle">
+            A selection of commercial releases, award-winning game jams, and open-source game tools.
+          </p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="filter-bar">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="unreal">Unreal Engine</button>
+          <button class="filter-btn" data-filter="unity">Unity</button>
+          <button class="filter-btn" data-filter="godot">Godot 4</button>
+          <button class="filter-btn" data-filter="jam">Game Jams</button>
+          <button class="filter-btn" data-filter="tool">Tools &amp; Shaders</button>
+        </div>
+
+        <!-- Dynamic Projects Grid -->
+        <div id="projects-grid" class="projects-grid">
+          <!-- Dynamically populated by js/main.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills & Tech Stack Section -->
+    <section id="skills" class="skills-section" style="background: rgba(10, 14, 24, 0.4);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// ARSENAL &amp; SYSTEMS</span>
+          <h2 class="section-title">Technical Expertise</h2>
+          <p class="section-subtitle">
+            Specialized in game feel, performant engine architecture, and graphics programming.
+          </p>
+        </div>
+
+        <!-- Primary Engine Mastery -->
+        <div id="skills-engines-grid" class="skills-engines-grid">
+          <!-- Dynamically populated by js/main.js -->
+        </div>
+
+        <!-- Core Disciplines -->
+        <div id="disciplines-grid" class="disciplines-grid">
+          <!-- Dynamically populated by js/main.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- About Developer Section -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// DEVELOPER PROFILE</span>
+          <h2 class="section-title">Behind The Code</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              I believe great games reside at the intersection of mathematical precision and expressive player feedback. Whether tuning the milliseconds of coyote-time in a high-speed platformer, architecting deterministic state rewind in C++, or writing custom HLSL screen-space post-processing shaders, I focus on tactile player delight.
+            </p>
+            <p>
+              Over the past 5 years, I've worked across small indie squads and solo productions. My experience spans full project lifecycles: from rapid greybox prototyping in 48-hour jams to shipping production-ready builds on Steam with optimized draw calls, automated build pipelines, and zero-leak memory management.
+            </p>
+
+            <div class="philosophy-card hud-bracket-box">
+              <h3 class="philosophy-title">My Core Engineering Pillars</h3>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 0;">
+                1. <strong>Responsiveness First</strong>: 60+ FPS baseline, instant input response, zero perceivable input lag.<br />
+                2. <strong>Decoupled Architecture</strong>: Modular systems that empower designers and artists to iterate without breaking code.<br />
+                3. <strong>Measurable Performance</strong>: Profile early, profile often using Unreal Insights and frame debuggers.
+              </p>
+            </div>
+          </div>
+
+          <div class="about-meta-grid">
+            <div class="meta-box hud-bracket-box">
+              <h4>Primary Engines</h4>
+              <p>Unreal Engine 5 &amp; Unity LTS</p>
+            </div>
+            <div class="meta-box hud-bracket-box">
+              <h4>Languages</h4>
+              <p>C++, C#, HLSL, Python</p>
+            </div>
+            <div class="meta-box hud-bracket-box">
+              <h4>Specialization</h4>
+              <p>Gameplay Mechanics, AI &amp; Shaders</p>
+            </div>
+            <div class="meta-box hud-bracket-box">
+              <h4>Location &amp; Availability</h4>
+              <p>Remote Worldwide / Full-Time</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Connect Section -->
+    <section id="contact" class="contact-section" style="background: rgba(10, 14, 24, 0.5);">
+      <div class="container contact-container">
+        <div class="section-header">
+          <span class="section-tag">// COMM CHANNEL</span>
+          <h2 class="section-title">Initiate Contact</h2>
+          <p class="section-subtitle">
+            Looking for a gameplay programmer, technical artist, or collaborator for your next title? Send a transmission or connect on socials.
+          </p>
+        </div>
+
+        <div class="contact-card hud-bracket-box">
+          <form id="contact-form">
+            <div class="form-group">
+              <label class="form-label" for="user-name">Your Name / Studio</label>
+              <input type="text" id="user-name" name="name" class="form-input" placeholder="e.g. Commander Shepard / Obsidian Studio" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="user-email">Email Address</label>
+              <input type="email" id="user-email" name="email" class="form-input" placeholder="name@domain.com" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="user-message">Project Details / Message</label>
+              <textarea id="user-message" name="message" class="form-textarea" placeholder="Tell me about your game concept, timeline, role requirements, or collaboration..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary hud-btn" style="width: 100%;">
+              <span>Transmit Message</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+          </form>
+        </div>
+
+        <!-- Social Connect Links -->
+        <div class="social-links-row">
+          <a href="https://store.steampowered.com" target="_blank" rel="noopener noreferrer" class="social-pill">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.031 4.524 4.527s-2.03 4.525-4.524 4.525h-.105l-4.076 2.811c0 .052.005.105.005.159 0 1.875-1.515 3.396-3.39 3.396-1.635 0-3.016-1.173-3.331-2.727L.436 14.819C1.948 20.07 6.745 24 12 24c6.627 0 12-5.373 12-12S18.627 0 11.979 0z"/>
+            </svg>
+            <span>Steam Developer</span>
+          </a>
+
+          <a href="https://itch.io" target="_blank" rel="noopener noreferrer" class="social-pill">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M2.5 4v16h19V4H2.5zm2.85 2h13.3c.75.95 1.85 2.37 1.85 2.37V10H3.5V8.37S4.6 6.95 5.35 6zm2.65 6a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm8 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z"/>
+            </svg>
+            <span>itch.io Games</span>
+          </a>
+
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-pill">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+            <span>GitHub Code</span>
+          </a>
+
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-pill">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+            <span>LinkedIn</span>
+          </a>
+
+          <a href="https://artstation.com" target="_blank" rel="noopener noreferrer" class="social-pill">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M0 17.723l2.027 3.505h.001a2.424 2.424 0 0 0 2.164 1.332h13.754l-2.793-4.837H0zm23.684-2.888L14.73 2.77a2.43 2.43 0 0 0-2.148-1.33h-.032a2.427 2.427 0 0 0-2.137 1.37L.316 19.96a1.144 1.144 0 0 0 .991 1.68h.047a1.157 1.157 0 0 0 1.004-.575L12.553 4.14 19.645 16.5l-4.14 7.15h4.636l3.543-6.137c.725-1.258.468-2.678 0-2.678z"/>
+            </svg>
+            <span>ArtStation</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-text">
+        &copy; 2024 Alex "Voxel" Rivers. Built for Game Developers, Indie Creators &amp; Studios.
+      </p>
+      <p class="footer-credits">
+        Powered by Zero-Build Modern Web • UE5 • Unity • Godot • HLSL
+      </p>
+    </div>
+  </footer>
+
+  <!-- Project Case Study Lightbox / Modal -->
+  <div id="project-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-container hud-bracket-box">
+      <button id="modal-close" class="modal-close-btn" aria-label="Close modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="modal-header-banner">
+        <img id="modal-banner" src="" alt="Project Banner" />
+      </div>
+
+      <div class="modal-body">
+        <h2 id="modal-title" class="modal-title">Project Title</h2>
+        <p id="modal-tagline" class="project-tagline"></p>
+
+        <!-- Quick Specs -->
+        <div id="modal-stats" class="modal-stats-grid"></div>
+
+        <!-- Video Trailer or Playable Embed -->
+        <div id="modal-video-slot"></div>
+
+        <h3 class="modal-section-h">
+          <span>◆</span> Project Overview
+        </h3>
+        <p id="modal-summary" style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem;"></p>
+
+        <h3 class="modal-section-h">
+          <span>◆</span> Key Systems &amp; Achievements
+        </h3>
+        <ul id="modal-highlights" class="modal-list"></ul>
+
+        <h3 class="modal-section-h">
+          <span>◆</span> Technical Architecture Breakdown
+        </h3>
+        <div id="modal-tech" class="tech-grid"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-notice"></div>
+
+  <!-- Main JavaScript Controller -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

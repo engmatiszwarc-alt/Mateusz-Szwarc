@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cyberForest" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#021a12"/>
+      <stop offset="60%" stop-color="#052e23"/>
+      <stop offset="100%" stop-color="#01130d"/>
+    </linearGradient>
+    <linearGradient id="neonGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="50%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#6ee7b7"/>
+    </linearGradient>
+    <filter id="emeraldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="450" fill="url(#cyberForest)"/>
+
+  <!-- Subterranean Grid Hex Pattern -->
+  <g stroke="#10b981" stroke-width="0.7" opacity="0.15" fill="none">
+    <polygon points="100,50 140,50 160,85 140,120 100,120 80,85"/>
+    <polygon points="180,50 220,50 240,85 220,120 180,120 160,85"/>
+    <polygon points="620,50 660,50 680,85 660,120 620,120 600,85"/>
+    <polygon points="700,50 740,50 760,85 740,120 700,120 680,85"/>
+  </g>
+
+  <!-- Cybernetic Core / Power Monolith -->
+  <rect x="360" y="100" width="80" height="150" rx="6" fill="#042f24" stroke="#34d399" stroke-width="2" filter="url(#emeraldGlow)"/>
+  <rect x="380" y="120" width="40" height="110" rx="3" fill="#10b981" opacity="0.8"/>
+  <line x1="370" y1="140" x2="430" y2="140" stroke="#021a12" stroke-width="3"/>
+  <line x1="370" y1="170" x2="430" y2="170" stroke="#021a12" stroke-width="3"/>
+  <line x1="370" y1="200" x2="430" y2="200" stroke="#021a12" stroke-width="3"/>
+
+  <!-- Bioluminescent Procedural Roots Spreading Out -->
+  <g fill="none" stroke="url(#neonGreen)" stroke-linecap="round" filter="url(#emeraldGlow)">
+    <path d="M 400 250 Q 400 290 320 320 T 180 350 T 80 390" stroke-width="5"/>
+    <path d="M 400 250 Q 400 300 480 330 T 620 360 T 720 390" stroke-width="5"/>
+    <path d="M 320 320 Q 280 360 220 400" stroke-width="3"/>
+    <path d="M 480 330 Q 520 370 560 410" stroke-width="3"/>
+    <path d="M 400 250 L 400 380" stroke-width="4"/>
+    <path d="M 400 330 Q 360 370 330 420" stroke-width="2.5"/>
+    <path d="M 400 330 Q 440 370 470 420" stroke-width="2.5"/>
+  </g>
+
+  <!-- Glowing Nodes on Roots -->
+  <circle cx="320" cy="320" r="7" fill="#6ee7b7" filter="url(#emeraldGlow)"/>
+  <circle cx="480" cy="330" r="7" fill="#6ee7b7" filter="url(#emeraldGlow)"/>
+  <circle cx="180" cy="350" r="5" fill="#34d399"/>
+  <circle cx="620" cy="360" r="5" fill="#34d399"/>
+  <circle cx="400" cy="380" r="6" fill="#6ee7b7"/>
+
+  <!-- Award Ribbon Badge -->
+  <g transform="translate(640, 40)">
+    <polygon points="0,0 120,0 120,45 60,65 0,45" fill="#f59e0b" filter="url(#emeraldGlow)"/>
+    <text x="60" y="24" fill="#000000" font-family="'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="12" text-anchor="middle">1ST PLACE</text>
+    <text x="60" y="38" fill="#78350f" font-family="'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="9" text-anchor="middle">GLOBAL GAME JAM</text>
+  </g>
+
+  <!-- Title Badge Overlay -->
+  <rect x="230" y="380" width="340" height="42" rx="6" fill="#01130d" stroke="#34d399" stroke-width="1.5" opacity="0.95"/>
+  <text x="400" y="406" fill="#34d399" font-family="'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="16" letter-spacing="3" text-anchor="middle">ROOTBOUND: SANCTUARY</text>
+  <text x="400" y="434" fill="#a7f3d0" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" letter-spacing="1.5" text-anchor="middle">48-HOUR JAM WINNER • UNITY &amp; C#</text>
+</svg>
